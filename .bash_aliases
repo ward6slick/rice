@@ -9,6 +9,9 @@ alias shutdown='sudo shutdown -P now'
 alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 alias hc='herbstclient'
+
+alias git-dotfiles='cp ~/{.bash_aliases,.bashrc,.emoji,.tmux.conf,.vimrc,.xbindkeysrc,.Xresources} ~/Repos/rice'
+alias git-configs='cp -r ~/.config/{chrome,cmus,herbstluftwm,polybar} ~/Repos/rice/configs'
 alias git-status='git status'
 alias git-push='git add -A && git commit -m "commit" && git push origin'
 
