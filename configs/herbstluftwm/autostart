@@ -16,7 +16,7 @@ hc set tree_style '╾│ ├└╼─┐'
 hc keyunbind --all
 
 # colors
-. "/home/slick/.colors/black1"
+. "/home/slick/.colors/black3"
 
 # bar
  find the panel
