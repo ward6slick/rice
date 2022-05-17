@@ -1,6 +1,6 @@
 ! slick xresources config
 
-#include ".colors/black1"
+#include ".colors/black3"
 
 *font:        xft:kakwafont:size=8,\
               xft:Zpix:pixelsize:8

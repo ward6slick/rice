@@ -1,4 +1,4 @@
-# slick aliases
+#sss slick aliases
 
 alias ls='ls --color=auto --group-directories-first'
 alias c='clear'
