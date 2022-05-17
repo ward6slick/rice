@@ -1,0 +1,35 @@
+! slick xresources config
+
+#include ".colors/black3"
+
+*font:        xft:kakwafont:size=8,\
+              xft:Zpix:pixelsize:8
+*boldFont:    xft:kakwafont:size=8,\
+              xft:Zpix:pixelsize:8
+*letterSpace: 0
+
+*scrollBar:       false
+*cursorBlink:     false
+*cursorUnderline: false
+
+URxvt.internalBorder: 8
+URxvt.geometry:       67x21
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher:    /usr/bin/xdg-open
+URxvt.matcher.button:  1
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+Sxiv.font: kakwafont
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh

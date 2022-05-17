@@ -1,0 +1,221 @@
+; slick polybar config
+
+[colors]
+background = ${xrdb:color0}
+background-alt = ${xrdb:color8}
+foreground = ${xrdb:color7}
+foreground-alt = ${xrdb:color5}
+alert = #bd2c40
+
+[bar/attached]
+inherit = bar/float
+width = 100%
+height = 22
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+border-top-size = 0
+border-left-size = 0
+border-right-size = 0
+
+[bar/float]
+;  x200
+;width = 1260
+;width = 98.4%
+;  x220
+width = 1346
+;  vga
+;width = 1900
+height = 22
+offset-x = 10
+offset-y = 10
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 2
+border-color = ${colors.background-alt}
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 0
+
+font-0 = kakwafont:pixelsize=10;1
+font-1 = Zpix:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = ewmh xwindow
+;modules-center = music
+modules-right = alsa temperature battery date
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[module/ewmh]
+type = internal/xworkspaces
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+;:pin-workspaces = true
+
+; Create click handler used to focus desktop
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle desktops
+; Default: true
+enable-scroll = true 
+
+icon-0 =
+icon-1 =
+icon-2 =
+icon-3 =
+icon-4 =
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(active|urgent|occupied|empty)>
+; Default: <label-state>
+format = <label-state>
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+label-active =  %name%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background-alt}
+label-active-padding = 1
+label-occupied-padding-right = 1
+label-urgent-padding-right = 1
+label-empty-padding-right = 1
+
+
+[module/xwindow]
+type = internal/xwindow
+interval = 1
+label = %title%
+label-maxlen=36
+label-padding =1
+format-underline = ${colors.foreground-alt}
+
+
+[module/music]
+type = custom/script
+interval = 1
+
+exec = music
+
+format-padding = 1
+format-suffix = ‮ ‬
+format-suffix-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = %a %m/%d/%y - %I:%M %p
+
+format-prefix = ‮ ‬
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.foreground-alt}
+click-left = "/home/x/Scripts/popup/calender.sh"
+
+label = %time%
+
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume>
+format-volume-underline = ${colors.foreground-alt}
+format-volume-prefix = "‮‬‭ "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = "‮‬‭ "
+format-muted-foreground = ${colors.background-alt}
+format-muted-underline = ${colors.foreground-alt}
+label-muted = %percentage%%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.foreground-alt}
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.foreground-alt}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${colors.foreground-alt}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-foreground = ${colors.foreground-alt}
+
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 90
+
+format = <ramp> <label>
+format-underline = ${colors.foreground-alt}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${colors.foreground-alt}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.alert}
+
+ramp-0 = 
+ramp-foreground = ${colors.foreground-alt}
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
