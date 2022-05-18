@@ -1,6 +1,6 @@
 /* slick userChrome.css */
 
-@import '/home/slick/.colors/browser/black1';
+@import '/home/slick/.colors/browser/black4';
 
 :root {
   --sfwindow: #f3f3f3;
@@ -251,12 +251,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
     display: none !important;
 }
 
-/* Disable favicons for sound playing tabs */
+/* Disable favicons for sound playing tabs 
 .tabbrowser-tab[soundplaying="true"] .tab-icon-image {
   display: none !important;
 }
-.tabbrowser-tab[pinned] :-moz-any(.tab-icon-overlay[soundplaying]) { display: none !important; }
-
+.tabbrowser-tab[pinned] :-moz-any(.tab-icon-overlay[soundplaying]) { display: none !important; } 
 
 
 /* Remove separator lines */
