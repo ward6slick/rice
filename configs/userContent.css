@@ -1,0 +1,29 @@
+:root {
+  scrollbar-width: none !important;
+}
+
+@-moz-document url(about:privatebrowsing) {
+  :root {
+    scrollbar-width: none !important;
+  }
+}
+
+/* vimium config */
+div > .vimiumHintMarker {
+/* linkhint boxes */
+background: #FFD76E !important;
+border: 1px solid #998142 !important;
+}
+
+div > .vimiumHintMarker span {
+/* linkhint text */
+color: black !important;
+font-weight: normal !important;
+font-size: 10px !important;
+padding: 0px 4px 1px 3px !important;
+border-radius: 0px !important;
+box-shadow: none !important;
+}
+
+div > .vimiumHintMarker > .matchingCharacter {
+}
