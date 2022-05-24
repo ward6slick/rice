@@ -13,7 +13,7 @@ alias hc='herbstclient'
 alias git-status='git status'
 alias git-push='git add -A && git commit -m "commit" && git push origin'
 alias git-dotfiles='cp ~/{.bash_aliases,.bashrc,.emoji,.tmux.conf,.vimrc,.xbindkeysrc,.Xresources} ~/Repos/rice'
-alias git-configs='cp -r ~/.config/{chrome,cmus,herbstluftwm,polybar} ~/Repos/rice/configs'
+alias git-configs='cp -r ~/.config/{chrome,cmus,herbstluftwm,polybar,sxiv} ~/Repos/rice/configs'
 alias git-chrome='cp -r ~/.mozilla/firefox/lz22swqi.default-esr/chrome/{userChrome.css,userContent.css} ~/Repos/rice/configs/chrome'
 
 alias cursor-off='setterm -cursor off'

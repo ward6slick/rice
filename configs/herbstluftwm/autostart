@@ -54,7 +54,7 @@ hc keybind $Mod-BackSpace remove
 hc keybind $Mod-Return spawn urxvt -name 'slick@x220:~'
 hc keybind $Mod-Shift-Return spawn urxvt -e tmux new-session -s urxvt
 hc keybind $Mod-v spawn drawterm
-hc keybind $Mod-d spawn dmenu_run -fn kakwafont -p $ -nb '#0f0f0f' -sb '#4a4a4a'
+hc keybind $Mod-d spawn dmenu_run -fn kakwafont -p $ -nb '#f3f3f3' -nf '#262626' -sb '#c3c3c3' -sf '#6788a4'
 hc keybind $Mod-Shift-d spawn dmenuunicode
 
 # applications
