@@ -6,7 +6,7 @@ do
 		cp "$file" ~/.wallpaper.png && 
 		feh --bg-fill "$HOME/.wallpaper.png" ;;
 	"d")
-		[ "$(printf "No\\nYes" | dmenu -fn kakwafont -nb '#f3f3f3' -nf '#262626' -sb '#c3c3c3' -sf '#6788a4' -i -p "Really delete $file?")" = "Yes" ] && rm "$file" ;;
+		[ "$(printf "No\\nYes" | dmenu -fn kakwafont -nb '#f3f3f3' -nf '#262626' -sb '#c3c3c3' -sf '#6788a4' -i -p "Delete $file?")" = "Yes" ] && rm "$file" ;;
 	"y")
 		readlink -f "$file" | tr -d '\n' | xclip -selection clipboard ;;
         esac
