@@ -16,7 +16,7 @@ hc set tree_style '╾│ ├└╼─┐'
 hc keyunbind --all
 
 # colors
-. "/home/slick/.colors/black1"
+. "/home/slick/.colors/black8"
 
 # bar
  find the panel
@@ -80,7 +80,7 @@ hc keybind Print spawn scrot 'scrot_%Y-%m-%d-%S_$wx$h.png'
 
 # notepad
 hc keybind $Mod-n spawn ~/.config/herbstluftwm/notepad.sh
-hc keybind $Mod-Shift-n load '(split vertical:0.500000:0 (split vertical:0.140000:1 (clients vertical:0) (clients vertical:0 0x600009)) (split vertical:0.870000:0 (clients vertical:0) (clients vertical:0)))'
+hc keybind $Mod-Shift-n load '(split vertical:0.5:0 (split vertical:0.14:1 (clients vertical:0) (clients max:1 0x1a00009 0x1c00009)) (split vertical:0.87:0 (clients horizontal:1 0x1e00009 0x2200009) (clients vertical:0)))'
 
 # focusing clients
 hc keybind $Mod-Left  focus left

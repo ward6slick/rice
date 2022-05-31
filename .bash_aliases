@@ -1,4 +1,4 @@
-#sss slick aliases
+# slick aliases
 
 alias ls='ls --color=auto --group-directories-first'
 alias c='clear'
@@ -13,7 +13,7 @@ alias hc='herbstclient'
 alias git-status='git status'
 alias git-push='git add -A && git commit -m "commit" && git push origin'
 alias git-dotfiles='cp ~/{.bash_aliases,.bashrc,.emoji,.tmux.conf,.vimrc,.xbindkeysrc,.Xresources} ~/Repos/rice'
-alias git-configs='cp -r ~/.config/{chrome,cmus,herbstluftwm,polybar,sxiv} ~/Repos/rice/configs'
+alias git-configs='cp -r ~/.config/{chrome,herbstluftwm,polybar} ~/Repos/rice/configs && cp -r ~/.config/cmus/autosave ~/Repos/rice/configs/cmus/autosave && cp -r ~/.config/sxiv/exec/key-handler ~/Repos/rice/configs/sxiv/exec/key-handler' 
 alias git-chrome='cp -r ~/.mozilla/firefox/lz22swqi.default-esr/chrome/{userChrome.css,userContent.css} ~/Repos/rice/configs/chrome'
 
 alias cursor-off='setterm -cursor off'
@@ -41,6 +41,7 @@ alias nf-off='neofetch --config-off'
 alias nf-small='neofetch --clean && neofetch --config Documents/Rice/neofetch-small'
 alias uf='Scripts/info-scripts/ufetch'
 alias birdfetch='Scripts/info-scripts/birdfetch'
+alias bonefetch='Scripts/info-scripts/bonefetch'
 alias cfetch='Scripts/info-scripts/cfetch'
 alias colors='Scripts/info-scripts/colors'
 alias colors-test='Scripts/info-scripts/colors-test'

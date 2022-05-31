@@ -5,6 +5,8 @@ do
 	"w")
 		cp "$file" ~/.wallpaper.png && 
 		feh --bg-fill "$HOME/.wallpaper.png" ;;
+    "c")
+        printf "%s" "$file" | tr -d '\n' | xclip -selection clipboard ;;
 	"d")
 		[ "$(printf "No\\nYes" | dmenu -fn kakwafont -nb '#f3f3f3' -nf '#262626' -sb '#c3c3c3' -sf '#6788a4' -i -p "Delete $file?")" = "Yes" ] && rm "$file" ;;
 	"y")
